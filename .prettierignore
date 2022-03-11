@@ -1,0 +1,14 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+
+# Yarn
+.yarn/*
+
+# generated output
+/packages/apple-music-api
+!/packages/apple-music-api/package.json
+!/packages/apple-music-api/README.json
+!/packages/apple-music-api/tsconfig.json
+!/packages/apple-music-api/tsconfig.lib.json

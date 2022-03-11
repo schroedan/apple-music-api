@@ -1,0 +1,26 @@
+{
+  "name": "apple-music-api",
+  "dockerComposeFile": ["../docker-compose.yaml", "docker-compose.yml"],
+  "service": "node",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "/bin/bash"
+      }
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "gamunu.vscode-yarn",
+    "mermade.openapi-lint",
+    "mrmlnc.vscode-remark",
+    "ms-azuretools.vscode-docker",
+    "nrwl.angular-console"
+  ]
+}

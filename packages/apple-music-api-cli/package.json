@@ -1,0 +1,22 @@
+{
+  "name": "@schroedan/apple-music-api-cli",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Apple Music API CLI",
+  "repository": "https://github.com/schroedan/apple-music-api.git",
+  "license": "MIT",
+  "dependencies": {
+    "@schroedan/apple-music-api-client": "^1.0.0",
+    "async": "^3.2.3",
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "express": "^4.17.2",
+    "open": "^8.4.0",
+    "passport": "^0.5.2",
+    "passport-apple-music": "^1.0.1"
+  },
+  "bin": {
+    "amctl": "./cli.js"
+  },
+  "main": "./cli.js"
+}

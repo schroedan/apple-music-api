@@ -1,0 +1,89 @@
+{
+  "version": 2,
+  "projects": {
+    "apple-music-api": {
+      "root": "packages/apple-music-api",
+      "sourceRoot": "packages/apple-music-api",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/apple-music-api",
+            "main": "packages/apple-music-api/api.ts",
+            "tsConfig": "packages/apple-music-api/tsconfig.lib.json",
+            "assets": ["packages/apple-music-api/*.md"]
+          }
+        }
+      },
+      "tags": ["scope:shared"]
+    },
+    "apple-music-api-cli": {
+      "root": "packages/apple-music-api-cli",
+      "sourceRoot": "packages/apple-music-api-cli",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/apple-music-api-cli",
+            "main": "packages/apple-music-api-cli/cli.ts",
+            "tsConfig": "packages/apple-music-api-cli/tsconfig.app.json",
+            "assets": ["packages/apple-music-api-cli/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["packages/apple-music-api-cli/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/apple-music-api-cli"],
+          "options": {
+            "jestConfig": "packages/apple-music-api-cli/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:app"]
+    },
+    "apple-music-api-client": {
+      "root": "packages/apple-music-api-client",
+      "sourceRoot": "packages/apple-music-api-client",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/js:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/apple-music-api-client",
+            "main": "packages/apple-music-api-client/index.ts",
+            "tsConfig": "packages/apple-music-api-client/tsconfig.lib.json",
+            "assets": ["packages/apple-music-api-client/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["packages/apple-music-api-client/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/apple-music-api-client"],
+          "options": {
+            "jestConfig": "packages/apple-music-api-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:client"]
+    }
+  }
+}

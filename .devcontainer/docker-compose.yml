@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  node:
+    tty: true
+    volumes:
+      - node_modules:/workspace/node_modules
+      - vs_code_extensions:/root/.vscode-server/extensions
+      - vs_code_extensions_insiders:/root/.vscode-server-insiders/extensions
+      - yarn:/workspace/.yarn/cache
+
+volumes:
+  node_modules:
+  vs_code_extensions:
+  vs_code_extensions_insiders:
+  yarn:

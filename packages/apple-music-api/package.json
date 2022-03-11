@@ -1,0 +1,12 @@
+{
+    "name": "@schroedan/apple-music-api",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "description": "Apple Music API",
+    "repository": "https://github.com/schroedan/apple-music-api.git",
+    "license": "MIT",
+    "dependencies": {
+        "request": "^2.81.0"
+    },
+    "main": "./api.js"
+}
